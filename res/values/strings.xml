@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手机卫士</string>
+    <string name="action_settings">Settings</string>
+    <string name="sample_device_admin_description">激活后才能开启相应手机防盗的功能</string>
+    <string name="sample_device_admin">手机卫士</string>
+
+</resources>

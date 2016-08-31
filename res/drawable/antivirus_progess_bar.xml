@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 进度条为0的时候 -->
+    <item android:id="@android:id/background"	android:drawable="@drawable/common_step_progess_gray2"/>
+
+    <!-- 进度条在0到100的时候 -->
+    <item android:id="@android:id/secondaryProgress"	android:drawable="@drawable/common_step_progess_green2"/>
+    
+    <!-- 进度条在100的时候 -->
+    <item android:id="@android:id/progress"	android:drawable="@drawable/common_step_progess_green2"/>
+</layer-list>

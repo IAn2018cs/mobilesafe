@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="手机杀毒" />
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/iv_bottom"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/scan_bottom" />
+
+        <ImageView
+            android:id="@+id/iv_arc"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/scan_middle_arc" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="正在查杀：手机卫士" />
+
+    <!-- progressDrawable添加自定义进度条图片(三种状态) -->
+    <ProgressBar
+        android:id="@+id/pb_virus"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:progressDrawable="@drawable/antivirus_progess_bar" />
+
+    <ScrollView
+        android:layout_marginTop="8dp"
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_addtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

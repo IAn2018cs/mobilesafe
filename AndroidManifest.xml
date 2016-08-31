@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaochen.mobilesafe"
+    android:versionCode="1"
+    android:versionName="2.8.26" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.xiaochen.mobilesafe" />
+    
+    
+    
+    <!-- android:theme="@android:style/Theme.Light.NoTitleBar" 把这里面能去掉标题栏的item加到style/AppTheme里 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />  <!-- 更改音频 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE"/>               <!-- 手机震动的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>   <!-- 在窗体上挂view的权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>  <!-- 监听电话外拨 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>    <!-- 拦截电话 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>   <!--在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>     <!-- 获取缓存大小 -->
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <!-- <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/> -->   <!-- 清理缓存的权限，只有系统应用才能加 -->
+    
+    <!-- 有米广告所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<!-- 以下为可选权限 -->
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    
+    
+    
+    
+    <application
+        android:name="com.xiaochen.mobilesafe.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+        <meta-data
+            android:name="com.thinkland.juheapi.openid"
+            android:value="JHae694ab67bae6831bd730a47415e13c7" />
+        
+        
+        <!-- 配置有米广告组件 -->
+        <activity
+    		android:name="net.youmi.android.AdBrowser"
+    		android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+    		android:theme="@android:style/Theme.Light.NoTitleBar" >
+		</activity>
+		<service
+    		android:name="net.youmi.android.AdService"
+    		android:exported="false" >
+		</service>
+		<receiver
+    		android:name="net.youmi.android.AdReceiver" >
+    			<intent-filter>
+        			<action android:name="android.intent.action.PACKAGE_ADDED" />
+        			<data android:scheme="package" />
+    			</intent-filter>
+		</receiver>
+        
+        
+        
+        <activity
+            android:name="com.xiaochen.mobilesafe.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.HelloActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.HomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SettingActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SetupOverActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SetSelf1Activity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SetSelf2Activity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SetSelf3Activity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.SetSelf4Activity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.ContactListActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.AToolsActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.MobileNoTrack" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.ToastLocationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.RockManActivity">
+        </activity>
+        <!-- launchMode启动模式改为单例    excludeFromRecents不在任务界面显示(长按home键)-->
+        <activity android:name="com.xiaochen.mobilesafe.activity.RockBackgroundActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.BlackNumberActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.AppManagerActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.ProcessManagerActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.ProcessSettingActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.CommonNumberActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.AppLockActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.InFoActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.LockActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.MobileAntiVirusActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.CleanCacheActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.BaseTestActivity" >
+        </activity>
+        <activity android:name="com.xiaochen.mobilesafe.activity.DataTrafficActivity" >
+        </activity>
+        
+        
+        
+        
+        
+
+        <receiver android:name="com.xiaochen.mobilesafe.receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaochen.mobilesafe.receiver.SmsReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaochen.mobilesafe.receiver.DeviceAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaochen.mobilesafe.receiver.ProcessWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data 
+                android:name="android.appwidget.provider" 
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+        <receiver android:name="com.xiaochen.mobilesafe.receiver.KillAllProcessReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.KILL_ALL_PROCESS" />
+            </intent-filter>
+        </receiver>
+        
+        
+        
+        
+        
+        
+        
+
+        <service android:name="com.xiaochen.mobilesafe.service.AlarmMusicService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.LocationService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.AddressShowService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.RockManService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.BlackNumberService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.ScreenLockService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.ProcessWidgetService" >
+        </service>
+        <service android:name="com.xiaochen.mobilesafe.service.AppLockDogService" >
+        </service>
+    </application>
+
+</manifest>

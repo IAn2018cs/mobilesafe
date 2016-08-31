@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="高级工具" />
+
+    <TextView
+        android:id="@+id/atools_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/setting_mobile"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="归属地查询"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF" />
+
+    <TextView
+        android:id="@+id/atools_sms_bef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/setting_feedback"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="短信备份"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF" />
+
+    <TextView
+        android:id="@+id/atools_common_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/realname_name"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="常用号码查询"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF" />
+
+    <TextView
+        android:id="@+id/atools_app_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/net_active_skip"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="程序锁"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF" />
+
+    <TextView
+        android:id="@+id/atools_rock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/safenewsicon"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="小火箭"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF" />
+
+    <TextView
+        android:id="@+id/developer_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_atools_text_bg"
+        android:drawableLeft="@drawable/setting_util"
+        android:drawableRight="@drawable/arrow_gray"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="开发测试"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/developer_test_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E3E1DF"
+        android:visibility="gone" />
+
+</LinearLayout>

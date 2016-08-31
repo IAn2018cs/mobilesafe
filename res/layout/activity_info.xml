@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="关于" />
+
+    <RelativeLayout
+        android:id="@+id/rl_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E7E7"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/image_icon"
+            android:text="@string/app_name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/image_icon"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/image_icon"
+            android:text="版本号：1.0.0"
+            android:textColor="#595959"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="作者：IAn\n开始制作时间：2016年7月\n完成时间：2016年8月\n功能简介：本应用分了九个模块，第一个模块是手机防盗，开启它可以使手机在丢失的时候方便寻找或销毁隐私数据。当手机卡更换时会给设置好的安全号码发送短信，还可以发送特定短信，来执行相应功能。\n第二个是通讯卫士，它可以拦截短信和电话，让您摆脱恶意的骚扰。\n第三个是软件管理，它可以管理您手机上安装的一些软件，可以卸载，启动，分享。不过系统应用不能卸载。\n第四个是进程管理，它会展示出当前手机中运行的进程和占用内存、可用内存等，您可以去选择清理或一键清理，也可以放在桌面上一个窗体小控件，方便清理。\n第五个是流量统计，用来管理您手机的流量使用情况。\n第六个是手机杀毒，可以检测您手机上是否存在病毒。\n第七个是缓存清理，可以帮你清理手机上的一些缓存垃圾。\n第八个是高级工具，您可以查询归属地信息，备份短信，查询一些常用的公共号码，开启程序锁保护隐私，玩玩小火箭等。\n最后一个是设置中心，它包含了一些请求权限开关，您可以在这里自由选择。\n"
+                android:textColor="#272C49"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ian" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="8dp"
+                android:gravity="right"
+                android:text="\n—— ian2018cs.cn"
+                android:textColor="#0D1B48"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
